@@ -1,5 +1,5 @@
 {
-  "name": "fuzzy-web3-sdk",
+  "name": "fuzzy-ads-sdk",
   "version": "0.1.0",
   "description": "",
   "main": "src/index.js",
@@ -12,7 +12,10 @@
   },
   "author": "",
   "license": "MIT",
-  "dependencies": {},
+  "dependencies": {
+    "bl": "^4.0.2",
+    "ipfs": "^0.48.0"
+  },
   "devDependencies": {
     "prettier": "1.18.2",
     "webpack": "^4.39.2",
