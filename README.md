@@ -9,6 +9,11 @@ npm i
 npm run serve
 ```
 
+**Build**
+```sh
+npm run build
+```
+
 ## Usage information
 
 This SDK is a plugin that can be inserted into any web2 or web3 website to power privacy-preserving monetization of the content.
