@@ -15,8 +15,8 @@ class FuzzyAd extends HTMLElement {
   }
 
   static async createIPFSNode() {
-    return await IPFS.create().then((ipfs) => {
-      ipfs.config.get('Addresses.Swarm').then((res) => {
+    return await IPFS.create().then((ipfs: any) => {
+      ipfs.config.get('Addresses.Swarm').then((res: any) => {
         console.log(res);
       });
     });
@@ -50,7 +50,7 @@ class FuzzyAd extends HTMLElement {
     return data;
   }
 
-  static async getAd(ipfs) {
+  static async getAd(ipfs: any) {
     const chunks = [];
     for await (const chunk of ipfs.cat('QmQ2r6iMNpky5f1m4cnm3Yqw8VSvjuKpTcK1X7dBR1LkJF')) {
       chunks.push(chunk);
@@ -65,8 +65,8 @@ class FuzzyAd extends HTMLElement {
     // });
 
     let adElem = document.createElement('img');
-    adElem.width = '100';
-    adElem.height = '100';
+    adElem.width = 100;
+    adElem.height = 100;
     adElem.src = 'https://ipfs.io/ipfs/QmW2WQi7j6c7UgJTarActp7tDNikE4B2qXtFCfLPdsgaTQ/cat.jpg';
     this.appendChild(adElem);
 
