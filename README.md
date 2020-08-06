@@ -19,7 +19,7 @@ There are two steps:
     <meta charset="utf-8">
     <title>your site</title>
     <meta name="description" content="your site">
-    <script src="dist/fuzzy-ads-sdk.js"></script>
+    <script src="https://gateway.pinata.cloud/ipfs/QmQgDt7LBMKunnCgEM1Z34NZT3vt7ym9FHL71GkjAhQszi/fuzzy-ads-sdk.js"></script>
   </head>
   <body>
     <fuzzy-ad auID="12345"></fuzzy-ad>
