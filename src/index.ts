@@ -46,15 +46,16 @@ class FuzzyAd extends HTMLElement {
     // FuzzyAd.getAd(ipfs)
     // });
 
-    let adElem = document.createElement('img');
-    adElem.width = 100;
-    adElem.height = 100;
-    adElem.src = 'https://ipfs.io/ipfs/QmW2WQi7j6c7UgJTarActp7tDNikE4B2qXtFCfLPdsgaTQ/cat.jpg';
-    this.appendChild(adElem);
+    let adImgElem = document.createElement('img');
+    adImgElem.width = 200;
+    adImgElem.height = 100;
+    adImgElem.src = 'https://filecoin.io/vintage/images/blog/fihfs-ignite.png';
+    this.onclick = () => window.open('https://filecoin.io', '_blank')
+    this.appendChild(adImgElem);
 
     FuzzyAd.getToken().then((image) => {
       console.log(image);
-      adElem.src = 'https://gateway.ipfs.io/ipfs/QmXoypizjW3WknFiJnKLwHCnL72vedxjQkDDP1mXWo6uco/I/m/Vincent_van_Gogh_-_Self-Portrait_-_Google_Art_Project_(454045).jpg';
+      adImgElem.src = 'https://filecoin.io/vintage/images/blog/fihfs-ignite.png';
     });
   }
 }
