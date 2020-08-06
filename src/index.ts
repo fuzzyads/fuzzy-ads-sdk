@@ -1,5 +1,3 @@
-const IPFS = require('ipfs');
-
 const Web3 = require('web3');
 const web3 = new Web3(
   new Web3.providers.HttpProvider('https://rinkeby.infura.io/v3/d908b9235eca4084ae854480ec1defa5'),
@@ -12,14 +10,6 @@ const getCurrentTime = () => Math.round(new Date().getTime() / 1000);
 class FuzzyAd extends HTMLElement {
   get auID() {
     return this.getAttribute('auID');
-  }
-
-  static async createIPFSNode() {
-    return await IPFS.create().then((ipfs: any) => {
-      ipfs.config.get('Addresses.Swarm').then((res: any) => {
-        console.log(res);
-      });
-    });
   }
 
   static async getToken() {
@@ -48,14 +38,6 @@ class FuzzyAd extends HTMLElement {
     const data = await fetch(`https://gateway.ipfs.io/ipfs/${ipfsHash}`);
 
     return data;
-  }
-
-  static async getAd(ipfs: any) {
-    const chunks = [];
-    for await (const chunk of ipfs.cat('QmQ2r6iMNpky5f1m4cnm3Yqw8VSvjuKpTcK1X7dBR1LkJF')) {
-      chunks.push(chunk);
-    }
-    console.log(Buffer.concat(chunks).toString());
   }
 
   connectedCallback() {
