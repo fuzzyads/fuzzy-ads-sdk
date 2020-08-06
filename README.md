@@ -6,12 +6,8 @@ Install the dependencies and start.
 
 ```sh
 npm i
-npm run serve
-```
-
-**Build**
-```sh
 npm run build
+npm run serve
 ```
 
 ## Usage information
